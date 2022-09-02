@@ -122,3 +122,38 @@ Para utilizar esta propiedad, es necesario integrar el módulo **FormsModule** e
 **app.component.html**
 
     <input type="text" [(ngModel)]="title">
+
+## Uso de LocalStorage
+
+JavaScript tiene el objeto `localStorage` para acceder al almacenamiento local del navegador.
+
+Entre sus propiedades y métodos, encontramos `setItem($key, $value)` y `getItem($key, $value)`.
+
+En este sentido, podemos guardar un objeto para el parámetro *$value* asignandole un objeto en formato JSON.
+
+Para esto, tenemos el método `JSON.stringify($object)` que nos convierte el objeto ingresado en una cadena JSON.
+
+Asimismo, podemos invertir la operación (transformar una cadena de JSON en un objeto) con el método `JSON.parse($string)`
+
+## Uso del Router
+
+Si recordamos, al generar un nuevo proyecto de Angular, el CLI nos pregunta si queremos generar el routing para la app. Esto nos va a generar un archivo `app-routing.module.ts` con el módulo `AppRoutingModule` que ya será automáticamente inyectado en `app.module.ts`.
+
+Dentro del **Router** ubicamos la constante *Routes* que contendrá las rutas a setear para nuestra aplicación.
+
+Las rutas se definen, de manera más sencilla, con el siguiente formato:
+
+    {
+        path: '**',
+        component: JuegoComponent
+    }
+
+* path: string => la ruta por donde ingresa la aplicación
+* component => la clase correspondiente al componente
+
+Existen dos wildcards para el *path*:
+
+* `''`: Sirve para setear la ruta base de la aplicación
+* `'**'`: Sirve como un comodín (es un punto de acceso a cualquier ruta ingresada).
+
+Como el orden de los elementos influye en el comportamiento del router, se recomienda ubicar estas dos rutas al final del array *Routes*
