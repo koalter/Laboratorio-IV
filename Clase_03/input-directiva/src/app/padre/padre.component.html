@@ -1,0 +1,19 @@
+<h1>Soy Padre</h1>
+<p>Se trata de un ejemplo para comprobar como enviar y recibir datos de un componente (Padre) a otro (Hijo).</p>
+<ul>
+    <li>Para pasar datos al Hijo en el Padre se asigna una variable a una propiedad Input del Hijo.</li>
+    <li>Para recibir datos del Hijo, el Hijo tiene que emitir un evento (output) y el padre controlar dicho evento.</li>
+</ul>
+<div>
+    <label> Valor para el hijo: 
+        <input type="text" [(ngModel)]="valorParaElHijo">
+    </label>
+</div>
+<div>
+    <p>
+        Emitido del Hijo: {{ this.valorHijo }}
+    </p>
+</div>
+<app-hijo 
+    [valorRecibido]="valorParaElHijo"
+    (eventoHijo)="manejarEventoHijo($event)"></app-hijo>

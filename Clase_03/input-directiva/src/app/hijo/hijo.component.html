@@ -1,0 +1,10 @@
+<h1>Soy Hijo</h1>
+<p>
+    Valor pasado por padre: {{ this.valorRecibido }}
+</p>
+
+<label>Valor para emitir: 
+    <input type="text" [(ngModel)]="valorParaElPadre">
+</label>
+
+<button (click)="emitirValor(valorParaElPadre)">Emitir Valor</button>
