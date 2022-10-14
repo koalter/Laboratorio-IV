@@ -1,0 +1,5 @@
+<p>tabla works!</p>
+<input type="text" [(ngModel)]="textoFiltro">
+<div *ngFor="let feriado of feriados | filtro:textoFiltro">
+  {{ feriado.motivo }} - {{ feriado.dia }}/{{ feriado.mes }} (Faltan {{ hoy | diasHasta:feriado.dia:feriado.mes }} días)
+</div>
