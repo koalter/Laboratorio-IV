@@ -1,4 +1,4 @@
-# Clase 06
+# Clase 07
 
 ## [Pipes](https://angular.io/guide/pipes)
 
