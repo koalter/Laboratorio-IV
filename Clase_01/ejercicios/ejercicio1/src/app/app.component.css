@@ -1,0 +1,25 @@
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    border: 1px solid darkgray;
+    border-radius: 1em;
+    padding: 2em;
+    width: 480px;
+}
+
+.input, .buttons, .output {
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.output input {
+    pointer-events: none;
+    background-color: gainsboro;
+}

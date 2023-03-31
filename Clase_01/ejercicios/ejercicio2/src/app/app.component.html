@@ -1,0 +1,18 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active-link">{{ title }}</a>
+      <div class="navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/" routerLinkActive="active-link">Home</a>
+          <a class="nav-link" routerLink="/login" routerLinkActive="active-link">Login</a>
+          <a class="nav-link" routerLink="/registro" routerLinkActive="active-link">Registro</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+<footer class="container pt-3 mb-3 border-top d-flex justify-content-center">
+  <span>Lorenzo Cea &copy; 2022</span>
+</footer>

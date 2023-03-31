@@ -1,0 +1,31 @@
+<main>
+  <h1>Ejercicio 1</h1>
+  <div class="container box">
+    <section class="entradas">
+      <div class="form-floating input">
+        <input class="form-control" type="text" id="edadUno" [(ngModel)]="edadUno" placeholder="Ingrese una edad" (keydown)="validarEntrada($event)">
+        <label for="edadUno">Ingrese una edad</label>
+      </div>
+      <div class="form-floating input">
+        <input class="form-control" type="text" id="edadDos" [(ngModel)]="edadDos" placeholder="Ingrese otra edad" (keydown)="validarEntrada($event)">
+        <label for="edadDos">Ingrese otra edad</label>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-success" id="calcular" (click)="calcular()">Calcular</button>
+        <button class="btn btn-danger" id="limpiar" (click)="limpiar()">Limpiar cuadros de texto</button>
+      </div>
+    </section>
+  
+    <section class="resultados">
+        <div class="form-floating output">
+          <input class="form-control" type="text" id="promedioEdades" [value]="promedioEdades" placeholder="Edad promedio">
+          <label for="promedioEdades">Edad promedio</label>
+        </div>
+        <div class="form-floating output">
+          <input class="form-control" type="text" id="sumaEdades" [value]="sumaEdades" placeholder="Suma de edades">
+          <label for="sumaEdades">Suma de edades</label>
+        </div>
+    </section>
+  </div>
+  <p>Lorenzo Cea - 2022</p>
+</main>
